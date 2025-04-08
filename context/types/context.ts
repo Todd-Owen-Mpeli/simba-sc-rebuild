@@ -1,10 +1,10 @@
 // Imports
 import {
+	ILinks,
 	IContent,
+	IMegaMenuLinks,
 	ICustomPostTypes,
 } from "@/types/index";
-import {ILinks, IMegaMenuLinks} from "@/types/context/Links";
-import {IClubPartnersPostType} from "@/types/ClubPartners/ClubPartners";
 
 // API
 import {IOnlineStore} from "@/api/Store/GetAllStoreItems";
@@ -78,7 +78,7 @@ export namespace IGlobal {
 		caseStudies: ICustomPostTypes.ICaseStudies;
 
 		// Club Partners
-		clubPartners: IClubPartnersPostType.IClubPartnersExcept;
+		clubPartners: ICustomPostTypes.IClubPartners.IExcept;
 
 		// Social Media
 		instagramFeed: IInstagram.IFeed;
