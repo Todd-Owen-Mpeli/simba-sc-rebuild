@@ -41,7 +41,7 @@
 // Home Page Hero Slider
 .HeroSwiperSlider {
     .externalLink {
-        font-family: $main;
+        @apply font-primary;
     }
 
     .swiper-button-prev,

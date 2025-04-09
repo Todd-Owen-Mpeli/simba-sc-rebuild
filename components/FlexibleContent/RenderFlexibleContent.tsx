@@ -10,9 +10,9 @@ import CTATwo from "@/components/CTA/CTATwo";
 
 // Hero Components
 import Hero from "@/components/Hero/Hero";
-import HeroTwo from "@/components/Hero/HeroTwo";
-import HeroFour from "@/components/Hero/HeroFour";
-import HeroThree from "@/components/Hero/HeroThree";
+import HeroTwo from "@/components/HeroTwo/HeroTwo";
+import HeroFour from "@/components/HeroFour/HeroFour";
+import HeroThree from "@/components/HeroThree/HeroThree";
 
 // Fans Pages
 import AllYoutubeVideos from "@/components/Fans/AllYouTubeVideos/index";

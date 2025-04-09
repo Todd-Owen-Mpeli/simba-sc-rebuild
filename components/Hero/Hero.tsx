@@ -9,12 +9,12 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation} from "swiper/modules";
 
 // Styling
-import styles from "@/styles/components/Hero.module.scss";
+import styles from "@/components/Hero/styles/Hero.module.scss";
 
 // Components
 import Card from "@/components/Hero/fragments/Card";
 
-const Hero: FC<IHero.IHero> = ({heroSlider}) => {
+const Hero: FC<IHero.IProps> = ({heroSlider}) => {
 	return (
 		<div className={styles.hero}>
 			<div className={styles.container}>
