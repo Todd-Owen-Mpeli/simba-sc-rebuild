@@ -2,6 +2,11 @@
 import {client} from "@/config/apollo";
 import {DocumentNode, gql} from "@apollo/client";
 
+// Components: ACF Flexible Content Post Types
+import { Hero } from "@/components/Hero/graphql/index";
+import { AboutSimba } from "@/components/AboutSimba/graphql/index";
+import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
+
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Flexible Content Components 
 (For every flexible content page) */
@@ -20,32 +25,7 @@ export const getAllFlexibleContentComponents = async (
 								... on DefaultTemplate {
 									flexibleContent {
 										flexibleContent {
-											... on ${postTypeFlexibleContent}_Hero {
-												fieldGroupName
-												displaySection
-												heroSlider {
-              										title
-              										paragraph
-													buttonLink {
-                										url
-                										title
-                										target
-                									}
-                									buttonLinkTwo {
-                										url
-                										title
-                										target
-                									}
-              										backgroundImage {
-              											altText
-              											sourceUrl
-              											mediaDetails {
-              												height
-              												width
-              											}
-              										}
-              									}
-											}
+											... on ${postTypeFlexibleContent}_Hero {${Hero}}
 											... on ${postTypeFlexibleContent}_HeroTwo {
 												fieldGroupName
 												displaySection
@@ -155,48 +135,8 @@ export const getAllFlexibleContentComponents = async (
 												paragraph
 												displayParagraph
 											}
-											... on ${postTypeFlexibleContent}_AboutSimba {
-												fieldGroupName
-                  								displaySection
-                  								title
-                  								titleTwo
-												paragraph
-												paragraphTwo
-                  								buttonLink {
-                  								  	url
-                  								  	title
-                  								  	target
-                  								}
-                  								image {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
-											... on ${postTypeFlexibleContent}_AboutTheClubGrid {
-												fieldGroupName
-                  								displaySection
-                  								aboutGrid {
-                  								  	title
-													paragraph
-													buttonLink {
-														url
-														title
-														target
-													}
-													image {
-														altText
-														sourceUrl
-														mediaDetails {
-															height
-															width
-														}
-													}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_AboutSimba {${AboutSimba}}
+											... on ${postTypeFlexibleContent}_AboutTheClubGrid {${AboutTheClubGrid}}
 											... on ${postTypeFlexibleContent}_GeneralInformation {
 												fieldGroupName
                   								displaySection
