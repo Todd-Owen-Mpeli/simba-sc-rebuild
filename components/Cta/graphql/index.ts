@@ -1,5 +1,5 @@
 // ACF Flexible Content Component Post Type Query
-export const Cta = `
+export const CTA = `
     fieldGroupName
     displaySection
     title

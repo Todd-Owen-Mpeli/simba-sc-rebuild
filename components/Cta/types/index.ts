@@ -1,9 +1,9 @@
-export namespace IHeroFour {
+export namespace ICTA {
 	export type IProps = {
 		title: string;
 		paragraph: string;
 		displayVideo: boolean;
-		displayFullHeight: boolean;
+		displayBigCta: boolean;
 		video: {
 			link: string;
 			title: string;
@@ -17,11 +17,6 @@ export namespace IHeroFour {
 			title: string;
 			target: string;
 		};
-		buttonLinkTwo: {
-			url: string;
-			title: string;
-			target: string;
-		};
 		backgroundImage: {
 			altText: string;
 			sourceUrl: string;
@@ -30,14 +25,6 @@ export namespace IHeroFour {
 				height: number;
 			};
 		};
-	};
-	export type ICard = {
-		video: IProps["video"];
-		title: IProps["title"];
-		paragraph: IProps["paragraph"];
-		buttonLink: IProps["buttonLink"];
-		displayVideo: IProps["displayVideo"];
-		buttonLinkTwo: IProps["buttonLinkTwo"];
 	};
 	export type IVideoCard = {
 		video: IProps["video"];

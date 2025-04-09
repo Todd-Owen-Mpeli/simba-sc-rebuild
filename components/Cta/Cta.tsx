@@ -1,51 +1,72 @@
 // Imports
 import {FC} from "react";
-import {IHeroFour} from "@/components/HeroFour/types/index";
+import Link from "next/link";
+import {motion} from "framer-motion";
+import {ICTA} from "@/components/CTA/types/index";
+import fadeInUp, {initial} from "@/animations/animations";
 
 // Styling
-import styles from "@/components/HeroFour/styles/HeroFour.module.scss";
+import styles from "@/components/CTA/styles/CTA.module.scss";
 
 // Components
-import Card from "@/components/HeroFour/fragments/Card";
+import Paragraph from "@/components/Elements/Paragraph";
+import VideoCard from "@/components/CTA/fragments/VideoCard";
+import ScrollYProgressReveal from "@/components/Animations/ScrollYProgressReveal";
 
-const HeroFour: FC<IHeroFour.IProps> = ({
+// Styling
+
+const CTA: FC<ICTA.IProps> = ({
 	title,
 	video,
 	paragraph,
 	buttonLink,
 	displayVideo,
-	buttonLinkTwo,
+	displayBigCta,
 	backgroundImage,
-	displayFullHeight,
 }) => {
 	return (
-		<div className={styles.heroFour}>
-			<div
-				className={
-					styles.container + ` ${displayFullHeight ? "h-[87vh]" : "h-[50vh]"}`
-				}
-				style={{
-					backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.5),
-					rgba(0, 0, 0, 0.5)),url("${backgroundImage?.sourceUrl}")`,
-				}}
-			>
-				<div className={styles.relativeWrapper}>
-					<div className={styles.stickyWrapper}>
-						<div className={styles.contentWrapper}>
-							<Card
-								title={title}
-								video={video}
-								paragraph={paragraph}
-								buttonLink={buttonLink}
-								displayVideo={displayVideo}
-								buttonLinkTwo={buttonLinkTwo}
-							/>
-						</div>
-					</div>
-				</div>
+		<div className={styles.cta}>
+			<div className={styles.container}>
+				<motion.div
+					className={
+						styles.cardWrapper +
+						` ${
+							displayBigCta
+								? "min-h-[65vh] lg:min-h-[75vh] max-h-[75vh]"
+								: "min-h-[45vh] lg:min-h-[50vh] max-h-[50vh]"
+						}`
+					}
+					style={{backgroundImage: `url("${backgroundImage?.sourceUrl}")`}}
+				>
+					<VideoCard video={video} displayVideo={displayVideo} />
+					<ScrollYProgressReveal className={styles.card}>
+						<motion.h4
+							initial={initial}
+							whileInView={fadeInUp}
+							viewport={{once: true}}
+							className={styles.title}
+						>
+							{title}
+						</motion.h4>
+						<Paragraph content={paragraph} className={styles.paragraph} />
+						<ScrollYProgressReveal className={styles.buttonLink}>
+							<Link
+								href={`${buttonLink?.url}`}
+								target={buttonLink?.target}
+								className={`${
+									buttonLink?.url
+										? styles.link + " buttonStyling-alt"
+										: "hidden"
+								}`}
+							>
+								{buttonLink?.title}
+							</Link>
+						</ScrollYProgressReveal>
+					</ScrollYProgressReveal>
+				</motion.div>
 			</div>
 		</div>
 	);
 };
 
-export default HeroFour;
+export default CTA;

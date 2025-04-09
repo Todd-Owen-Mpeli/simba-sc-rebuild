@@ -3,6 +3,7 @@ import {client} from "@/config/apollo";
 import {DocumentNode, gql} from "@apollo/client";
 
 // Components: ACF Flexible Content Post Types
+import { CTA } from "@/components/CTA/graphql/index";
 import { Hero } from "@/components/Hero/graphql/index";
 import { HeroTwo } from "@/components/HeroTwo/graphql/index";
 import { HeroFour } from "@/components/HeroFour/graphql/index";
@@ -32,35 +33,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_HeroTwo {${HeroTwo}}
 											... on ${postTypeFlexibleContent}_HeroThree {${HeroThree}}
 											... on ${postTypeFlexibleContent}_HeroFour {${HeroFour}}
-											... on ${postTypeFlexibleContent}_Cta {
-												fieldGroupName
-                  								displaySection
-                  								title
-                  								paragraph
-												displayVideo
-												displayBigCta
-												video {
-                  								  	link
-                  								  	title
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-												buttonLink {
-                									url
-                									title
-                									target
-                								}
-												backgroundImage {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_Cta {${CTA}}
 											... on ${postTypeFlexibleContent}_CtaTwo {
 												fieldGroupName
                   								displaySection

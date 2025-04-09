@@ -5,7 +5,7 @@ import React, {FC, Fragment} from "react";
 import {usePageContext} from "@/context/providers/PageContextProvider";
 
 // CTA Components
-import CTA from "@/components/CTA/Index";
+import CTA from "@/components/CTA/Cta";
 import CTATwo from "@/components/CTA/CTATwo";
 
 // Hero Components
