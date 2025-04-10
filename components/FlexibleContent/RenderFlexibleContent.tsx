@@ -6,7 +6,7 @@ import {usePageContext} from "@/context/providers/PageContextProvider";
 
 // CTA Components
 import CTA from "@/components/CTA/Cta";
-import CTATwo from "@/components/CTA/CTATwo";
+import CTATwo from "@/components/CTATwo/CTATwo";
 
 // Hero Components
 import Hero from "@/components/Hero/Hero";
