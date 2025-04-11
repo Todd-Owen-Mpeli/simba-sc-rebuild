@@ -10,6 +10,7 @@ import { HeroTwo } from "@/components/HeroTwo/graphql/index";
 import { HeroFour } from "@/components/HeroFour/graphql/index";
 import { HeroThree } from "@/components/HeroThree/graphql/index";
 import { AboutSimba } from "@/components/AboutSimba/graphql/index";
+import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
@@ -44,20 +45,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_AboutTheClubGrid {${AboutTheClubGrid}}
 											... on ${postTypeFlexibleContent}_GeneralInformation {${GeneralInformation}}
 											... on ${postTypeFlexibleContent}_OfficialMembershipsCta {${OfficialMembershipsCta}}
-											... on ${postTypeFlexibleContent}_SponsorsLogos {
-												fieldGroupName
-												displaySection
-												logoGrid {
-													image {
-														altText
-														sourceUrl
-														mediaDetails {
-															height
-															width
-														}
-													}
-												}
-											}
+											... on ${postTypeFlexibleContent}_SponsorsLogos {${SponsorsLogos}}
 											... on ${postTypeFlexibleContent}_ClubPartnersGrid {
 												fieldGroupName
                   								displaySection

@@ -22,7 +22,6 @@ import AllPodcastsVideos from "@/components/Fans/AllPodcastsVideos/index";
 // Other Components
 import VideoBlock from "@/components/VideoBlock/index";
 import VisitStore from "@/components/VisitStore/index";
-import SponsorsLogos from "@/components/SponsorsLogos";
 import ContactForm from "@/components/ContactForm/index";
 import LatestNewsGrid from "@/components/LatestNews/index";
 import SocialMediaGrid from "@/components/SocialMediaGrid";
@@ -31,6 +30,7 @@ import NewsletterBanner from "@/components/NewsletterBanner";
 import SimbaTVBanner from "@/components/SimbaTVBanner/index";
 import NewOfficialKitCta from "@/components/NewOfficialKitCta";
 import TrophyCabinetBanner from "@/components/TrophyCabinetBanner";
+import SponsorsLogos from "@/components/SponsorsLogos/SponsorsLogos";
 import TitleContentImage from "@/components/TitleContentImage/Index";
 import ClubCardMembershipCTA from "@/components/ClubCardMembershipCta";
 import TitleParagraph from "@/components/TitleParagraph/TitleParagraph";
