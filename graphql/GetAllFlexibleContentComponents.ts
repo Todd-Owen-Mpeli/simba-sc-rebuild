@@ -11,10 +11,12 @@ import { HeroFour } from "@/components/HeroFour/graphql/index";
 import { HeroThree } from "@/components/HeroThree/graphql/index";
 import { VideoBlock } from "@/components/VideoBlock/graphql/index";
 import { AboutSimba } from "@/components/AboutSimba/graphql/index";
+import { VisitStore } from "@/components/VisitStore/graphql/index";
 import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
+import { TrophyCabinetBanner } from "@/components/TrophyCabinetBanner/graphql/index";
 import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
 
 // Components: Fans
@@ -62,55 +64,8 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_LatestVideoBlock {${LatestVideoBlock}}
 											... on ${postTypeFlexibleContent}_AllYoutubeVideos {${AllYouTubeVideos}}
 											... on ${postTypeFlexibleContent}_AllPodcastsVideos {${AllPodcastsVideos}}
-											... on ${postTypeFlexibleContent}_VisitStore {
-												fieldGroupName
-												displaySection
-												title
-												buttonLink {
-                  								  	url
-                  								  	title
-                  								  	target
-                  								}
-												backgroundImage {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
-											... on ${postTypeFlexibleContent}_TrophyCabinetBanner {
-												fieldGroupName
-                  								displaySection
-                  								title
-                  								paragraph
-												buttonLink {
-                									url
-                									title
-                									target
-                								}
-												trophyCabinet {
-                  									name
-                  									totalAmount
-                  									image {
-                  										altText
-                  										sourceUrl
-                  										mediaDetails {
-                  											height
-                  											width
-                  										}
-                  									}
-                  								}
-												backgroundImage {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_VisitStore {${VisitStore}}
+											... on ${postTypeFlexibleContent}_TrophyCabinetBanner {${TrophyCabinetBanner}}
 											... on ${postTypeFlexibleContent}_TitleContentImage {
             									fieldGroupName
 												displaySection

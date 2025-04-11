@@ -29,7 +29,6 @@ import AboutSimba from "@/components/AboutSimba/AboutSimba";
 import NewsletterBanner from "@/components/NewsletterBanner";
 import SimbaTVBanner from "@/components/SimbaTVBanner/index";
 import NewOfficialKitCta from "@/components/NewOfficialKitCta";
-import TrophyCabinetBanner from "@/components/TrophyCabinetBanner";
 import SponsorsLogos from "@/components/SponsorsLogos/SponsorsLogos";
 import TitleContentImage from "@/components/TitleContentImage/Index";
 import ClubCardMembershipCTA from "@/components/ClubCardMembershipCta";
@@ -38,6 +37,7 @@ import LastThreeFixtures from "@/components/Fixtures/LastThreeFixtures";
 import AboutTheClubGrid from "@/components/AboutTheClubGrid/AboutTheClubGrid";
 import TitleParagraphDynamicColour from "@/components/TitleParagraphDynamicColour";
 import GeneralInformation from "@/components/GeneralInformation/GeneralInformation";
+import TrophyCabinetBanner from "@/components/TrophyCabinetBanner/TrophyCabinetBanner";
 import OfficialMembershipsCta from "@/components/OfficialMembershipsCta/OfficialMembershipsCta";
 
 // Components: Club Partners
