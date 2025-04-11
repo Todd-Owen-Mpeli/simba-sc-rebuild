@@ -5,7 +5,7 @@ import {FC} from "react";
 import {motion} from "framer-motion";
 import { initialTwo, fadeIn } from "@/animations/animations";
 
-export type IFormatNumber = {
+type IFormatNumber = {
 	number: string;
 	decimals: number;
 	className: string;

@@ -15,9 +15,9 @@ import HeroFour from "@/components/HeroFour/HeroFour";
 import HeroThree from "@/components/HeroThree/HeroThree";
 
 // Fans Pages
-import AllYoutubeVideos from "@/components/Fans/AllYouTubeVideos/index";
-import LatestVideoBlock from "@/components/Fans/LatestVideoBlock/index";
 import AllPodcastsVideos from "@/components/Fans/AllPodcastsVideos/index";
+import AllYoutubeVideos from "@/components/Fans/AllYouTubeVideos/AllYouTubeVideos";
+import LatestVideoBlock from "@/components/Fans/LatestVideoBlock/LatestVideoBlock";
 
 // Other Components
 import VisitStore from "@/components/VisitStore/index";

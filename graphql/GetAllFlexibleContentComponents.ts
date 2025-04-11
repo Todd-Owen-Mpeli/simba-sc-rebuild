@@ -17,6 +17,10 @@ import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
 
+// Components: Fans
+import { LatestVideoBlock } from "@/components/Fans/LatestVideoBlock/graphql/index";
+import { AllYouTubeVideos } from "@/components/Fans/AllYouTubeVideos/graphql/index";
+
 // Components: Club Partners Flexible Content Post Types
 import { ImageSlider } from "@/components/ClubPartners/ImageSlider/graphql/index";
 import { ClubPartnersGrid } from "@/components/ClubPartners/ClubPartnersGrid/graphql/index";
@@ -54,44 +58,8 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_SponsorsLogos {${SponsorsLogos}}
 											... on ${postTypeFlexibleContent}_ClubPartnersGrid {${ClubPartnersGrid}}
 											... on ${postTypeFlexibleContent}_VideoBlock {${VideoBlock}}
-											... on ${postTypeFlexibleContent}_LatestVideoBlock {
-												fieldGroupName
-												displaySection
-												title
-												video {
-                  								  	link
-                  								  	title
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-												subtitle
-												paragraph
-												displayVideo
-												buttonLink {
-													url
-													title
-													target
-												}
-												displayButtonColor
-												displayContentColor
-												displayBackgroundSvg
-            									displayBackgroundColor
-												videoBackgroundImage {
-													altText
-													sourceUrl
-													mediaDetails {
-														height
-														width
-													}
-												}
-											}
-											... on ${postTypeFlexibleContent}_AllYoutubeVideos {
-												fieldGroupName
-												displaySection
-												title
-											}
+											... on ${postTypeFlexibleContent}_LatestVideoBlock {${LatestVideoBlock}}
+											... on ${postTypeFlexibleContent}_AllYoutubeVideos {${AllYouTubeVideos}}
 											... on ${postTypeFlexibleContent}_AllPodcastsVideos {
 												fieldGroupName
 												displaySection
