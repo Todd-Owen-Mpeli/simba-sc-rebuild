@@ -15,6 +15,7 @@ import { VisitStore } from "@/components/VisitStore/graphql/index";
 import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
+import { NewsletterBanner } from "@/components/NewsletterBanner/graphql/index";
 import { TitleContentImage } from "@/components/TitleContentImage/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 import { TrophyCabinetBanner } from "@/components/TrophyCabinetBanner/graphql/index";
@@ -72,17 +73,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_TitleContentImage {${TitleContentImage}}
 											... on ${postTypeFlexibleContent}_TitleParagraphDynamicColour {${TitleParagraphDynamicColour}}
 											... on ${postTypeFlexibleContent}_ClubCardMembershipCta {${ClubCardMembershipCTA}}
-											... on ${postTypeFlexibleContent}_NewsletterBanner {
-												fieldGroupName
-                  								displaySection
-                  								title
-                  								paragraph
-                  								buttonLink {
-                  								  	url
-                  								  	title
-                  								  	target
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_NewsletterBanner {${NewsletterBanner}}
 											... on ${postTypeFlexibleContent}_SimbatvBanner {
 												fieldGroupName
                   								displaySection
