@@ -18,6 +18,7 @@ import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { TitleContentImage } from "@/components/TitleContentImage/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 import { TrophyCabinetBanner } from "@/components/TrophyCabinetBanner/graphql/index";
+import { ClubCardMembershipCTA } from "@/components/ClubCardMembershipCTA/graphql/index";
 import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
 import { TitleParagraphDynamicColour } from "@/components/TitleParagraphDynamicColour/graphql/index";
 
@@ -70,34 +71,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_TrophyCabinetBanner {${TrophyCabinetBanner}}
 											... on ${postTypeFlexibleContent}_TitleContentImage {${TitleContentImage}}
 											... on ${postTypeFlexibleContent}_TitleParagraphDynamicColour {${TitleParagraphDynamicColour}}
-											... on ${postTypeFlexibleContent}_ClubCardMembershipCta {
-												fieldGroupName
-                  								displaySection
-                  								title
-                  								displayVideo
-												buttonLink {
-                									url
-                									title
-                									target
-                								}
-												video {
-                  								  	link
-                  								  	title
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-												clubCardMembershipText
-												backgroundImage {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_ClubCardMembershipCta {${ClubCardMembershipCTA}}
 											... on ${postTypeFlexibleContent}_NewsletterBanner {
 												fieldGroupName
                   								displaySection
