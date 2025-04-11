@@ -19,6 +19,7 @@ import { TitleContentImage } from "@/components/TitleContentImage/graphql/index"
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 import { TrophyCabinetBanner } from "@/components/TrophyCabinetBanner/graphql/index";
 import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
+import { TitleParagraphDynamicColour } from "@/components/TitleParagraphDynamicColour/graphql/index";
 
 // Components: Fans
 import { LatestVideoBlock } from "@/components/Fans/LatestVideoBlock/graphql/index";
@@ -68,24 +69,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_VisitStore {${VisitStore}}
 											... on ${postTypeFlexibleContent}_TrophyCabinetBanner {${TrophyCabinetBanner}}
 											... on ${postTypeFlexibleContent}_TitleContentImage {${TitleContentImage}}
-											... on ${postTypeFlexibleContent}_TitleParagraphDynamicColour {
-            									fieldGroupName
-												displaySection
-            									title
-            									paragraph
-												buttonLink {
-                									url
-                									title
-                									target
-                								}
-                								buttonLinkTwo {
-                									url
-                									title
-                									target
-                								}
-            									displayContentColor
-            									displayBackgroundColor
-            								}
+											... on ${postTypeFlexibleContent}_TitleParagraphDynamicColour {${TitleParagraphDynamicColour}}
 											... on ${postTypeFlexibleContent}_ClubCardMembershipCta {
 												fieldGroupName
                   								displaySection

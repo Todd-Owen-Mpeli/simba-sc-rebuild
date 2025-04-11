@@ -35,10 +35,10 @@ import TitleParagraph from "@/components/TitleParagraph/TitleParagraph";
 import LastThreeFixtures from "@/components/Fixtures/LastThreeFixtures";
 import AboutTheClubGrid from "@/components/AboutTheClubGrid/AboutTheClubGrid";
 import TitleContentImage from "@/components/TitleContentImage/TitleContentImage";
-import TitleParagraphDynamicColour from "@/components/TitleParagraphDynamicColour";
 import GeneralInformation from "@/components/GeneralInformation/GeneralInformation";
 import TrophyCabinetBanner from "@/components/TrophyCabinetBanner/TrophyCabinetBanner";
 import OfficialMembershipsCta from "@/components/OfficialMembershipsCta/OfficialMembershipsCta";
+import TitleParagraphDynamicColour from "@/components/TitleParagraphDynamicColour/TitleParagraphDynamicColour";
 
 // Components: Club Partners
 import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid/ClubPartnersGrid";
