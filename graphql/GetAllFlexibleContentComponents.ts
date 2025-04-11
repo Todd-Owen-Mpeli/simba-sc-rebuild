@@ -12,6 +12,7 @@ import { HeroThree } from "@/components/HeroThree/graphql/index";
 import { VideoBlock } from "@/components/VideoBlock/graphql/index";
 import { AboutSimba } from "@/components/AboutSimba/graphql/index";
 import { VisitStore } from "@/components/VisitStore/graphql/index";
+import { SimbaTVBanner } from "@/components/SimbaTVBanner/graphql/index";
 import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
@@ -74,31 +75,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_TitleParagraphDynamicColour {${TitleParagraphDynamicColour}}
 											... on ${postTypeFlexibleContent}_ClubCardMembershipCta {${ClubCardMembershipCTA}}
 											... on ${postTypeFlexibleContent}_NewsletterBanner {${NewsletterBanner}}
-											... on ${postTypeFlexibleContent}_SimbatvBanner {
-												fieldGroupName
-                  								displaySection
-                  								title
-                  								paragraph
-												buttonLink {
-                									url
-                									title
-                									target
-                								}
-												contentOptions {
-                  								  	subtitle
-                  								  	buttonTitle
-                  								  	contentExcerpt
-                  								  	buttonFunction
-                  								}
-												backgroundImage {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_SimbatvBanner {${SimbaTVBanner}}
 											... on ${postTypeFlexibleContent}_SocialMediaGrid {
 												fieldGroupName
 												displaySection
