@@ -5,7 +5,7 @@ import React, {FC, Fragment} from "react";
 import {usePageContext} from "@/context/providers/PageContextProvider";
 
 // CTA Components
-import CTA from "@/components/CTA/Cta";
+import CTA from "@/components/CTA/CTA";
 import CTATwo from "@/components/CTATwo/CTATwo";
 
 // Hero Components
@@ -35,11 +35,11 @@ import TitleContentImage from "@/components/TitleContentImage/Index";
 import ClubCardMembershipCTA from "@/components/ClubCardMembershipCta";
 import TitleParagraph from "@/components/TitleParagraph/TitleParagraph";
 import LastThreeFixtures from "@/components/Fixtures/LastThreeFixtures";
-import OfficialMembershipsCta from "@/components/OfficialMembershipsCta";
 import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid";
 import AboutTheClubGrid from "@/components/AboutTheClubGrid/AboutTheClubGrid";
 import TitleParagraphDynamicColour from "@/components/TitleParagraphDynamicColour";
 import GeneralInformation from "@/components/GeneralInformation/GeneralInformation";
+import OfficialMembershipsCta from "@/components/OfficialMembershipsCta/OfficialMembershipsCta";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();

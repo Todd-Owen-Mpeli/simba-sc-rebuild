@@ -13,6 +13,7 @@ import { AboutSimba } from "@/components/AboutSimba/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
+import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
 
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Flexible Content Components 
@@ -42,32 +43,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_AboutSimba {${AboutSimba}}
 											... on ${postTypeFlexibleContent}_AboutTheClubGrid {${AboutTheClubGrid}}
 											... on ${postTypeFlexibleContent}_GeneralInformation {${GeneralInformation}}
-											... on ${postTypeFlexibleContent}_OfficialMembershipsCta {
-												fieldGroupName
-                  								displaySection
-                  								title
-                  								paragraph
-                  								image {
-                  									altText
-                  									sourceUrl
-                  									mediaDetails {
-                  										height
-                  										width
-                  									}
-                  								}
-                  								buttonLink {
-                  									url
-                  									title
-                  									target
-                  								}
-                  								bulletPoints {
-                  								  	point {
-                  								  		url
-                  								  		title
-                  								  		target
-                  								  	}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_OfficialMembershipsCta {${OfficialMembershipsCta}}
 											... on ${postTypeFlexibleContent}_SponsorsLogos {
 												fieldGroupName
 												displaySection
