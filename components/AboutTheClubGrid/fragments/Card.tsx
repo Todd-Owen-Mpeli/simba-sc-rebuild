@@ -11,7 +11,7 @@ import {IAboutTheClubGrid} from "@/components/AboutTheClubGrid/types/index";
 import styles from "@/components/AboutTheClubGrid/styles/AboutTheClubGrid.module.scss";
 
 // Components
-import Paragraph from "@/components/Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 
 const Card: FC<IAboutTheClubGrid.ICard> = ({
     image,

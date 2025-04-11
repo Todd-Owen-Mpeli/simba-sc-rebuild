@@ -16,7 +16,7 @@ import {IAboutSimba} from "@/components/AboutSimba/types/index";
 import styles from "@/components/AboutSimba/styles/AboutSimba.module.scss";
 
 // Components
-import Paragraph from "@/components/Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 import ScrollYProgressReveal from "@/components/Animations/ScrollYProgressReveal";
 import SlideInXLeftAnimation from "@/components/Animations/SlideInXLeftAnimation";
 import SlideInXRightAnimation from "@/components/Animations/SlideInXRightAnimation";

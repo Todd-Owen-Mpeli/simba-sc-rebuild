@@ -9,7 +9,7 @@ import fadeInUp, {initial} from "@/animations/animations";
 import styles from "@/components/CTA/styles/CTA.module.scss";
 
 // Components
-import Paragraph from "@/components/Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 import VideoCard from "@/components/CTA/fragments/VideoCard";
 import ScrollYProgressReveal from "@/components/Animations/ScrollYProgressReveal";
 

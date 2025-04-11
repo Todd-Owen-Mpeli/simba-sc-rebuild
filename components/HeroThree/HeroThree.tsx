@@ -7,7 +7,7 @@ import styles from "@/styles/components/Hero.module.scss";
 
 // Components
 import Title from "@/components/Elements/Title";
-import Paragraph from "@/components/Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 
 const HeroThree: FC<IHeroThree.IProps> = ({
 	title,

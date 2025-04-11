@@ -12,7 +12,7 @@ import {fadeIn, initialTwo} from "@/animations/animations";
 import styles from "@/components/Hero/styles/Hero.module.scss";
 
 // Components
-import Paragraph from "@/components/Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 import ContentSliceRevealMaskAnimation from "@/components/Animations/ContentSliceRevealMaskAnimation";
 
 const Card: FC<IHero.ICard> = ({

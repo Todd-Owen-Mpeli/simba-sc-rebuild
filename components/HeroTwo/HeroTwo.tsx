@@ -8,7 +8,7 @@ import {fadeIn, initialTwo} from "@/animations/animations";
 import styles from "@/styles/components/HeroTwo.module.scss";
 
 // Components
-import Paragraph from "@/components/Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 
 const HeroTwo: FC<IHeroTwo.IProps> = ({title, paragraph, backgroundImage}) => {
 	return (

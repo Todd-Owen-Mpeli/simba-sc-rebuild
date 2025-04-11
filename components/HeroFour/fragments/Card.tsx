@@ -10,7 +10,7 @@ import styles from "@/components/HeroFour/styles/HeroFour.module.scss";
 
 // Components
 import Title from "@/components/Elements/Title";
-import Paragraph from "@/components/Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 import VideoCard from "@/components/HeroFour/fragments/VideoCard";
 
 const Card: FC<IHeroFour.ICard> = ({

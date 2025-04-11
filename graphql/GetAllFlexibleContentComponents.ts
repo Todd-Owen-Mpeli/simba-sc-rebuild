@@ -12,6 +12,7 @@ import { HeroThree } from "@/components/HeroThree/graphql/index";
 import { AboutSimba } from "@/components/AboutSimba/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
+import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Flexible Content Components 
@@ -40,24 +41,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_TitleParagraph {${TitleParagraph}}
 											... on ${postTypeFlexibleContent}_AboutSimba {${AboutSimba}}
 											... on ${postTypeFlexibleContent}_AboutTheClubGrid {${AboutTheClubGrid}}
-											... on ${postTypeFlexibleContent}_GeneralInformation {
-												fieldGroupName
-                  								displaySection
-												title
-												paragraph
-												informationGrid {
-                  								  	title
-													paragraph
-                  								}
-												image {
-													altText
-													sourceUrl
-													mediaDetails {
-														height
-														width
-													}
-												}
-											}
+											... on ${postTypeFlexibleContent}_GeneralInformation {${GeneralInformation}}
 											... on ${postTypeFlexibleContent}_OfficialMembershipsCta {
 												fieldGroupName
                   								displaySection

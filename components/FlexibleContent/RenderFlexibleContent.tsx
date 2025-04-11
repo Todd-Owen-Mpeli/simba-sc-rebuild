@@ -30,7 +30,6 @@ import AboutSimba from "@/components/AboutSimba/AboutSimba";
 import NewsletterBanner from "@/components/NewsletterBanner";
 import SimbaTVBanner from "@/components/SimbaTVBanner/index";
 import NewOfficialKitCta from "@/components/NewOfficialKitCta";
-import GeneralInformation from "@/components/GeneralInformation";
 import TrophyCabinetBanner from "@/components/TrophyCabinetBanner";
 import TitleContentImage from "@/components/TitleContentImage/Index";
 import ClubCardMembershipCTA from "@/components/ClubCardMembershipCta";
@@ -40,6 +39,7 @@ import OfficialMembershipsCta from "@/components/OfficialMembershipsCta";
 import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid";
 import AboutTheClubGrid from "@/components/AboutTheClubGrid/AboutTheClubGrid";
 import TitleParagraphDynamicColour from "@/components/TitleParagraphDynamicColour";
+import GeneralInformation from "@/components/GeneralInformation/GeneralInformation";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();

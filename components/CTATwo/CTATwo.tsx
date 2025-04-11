@@ -10,7 +10,7 @@ import styles from "@/components/CTATwo/styles/CTATwo.module.scss";
 
 // Components
 import Title from "@/components/Elements/Title";
-import Paragraph from "@/components/Elements/Paragraph";
+import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 import ScrollYProgressReveal from "@/components/Animations/ScrollYProgressReveal";
 import ContentSliceRevealMaskAnimation from "@/components/Animations/ContentSliceRevealMaskAnimation";
 
