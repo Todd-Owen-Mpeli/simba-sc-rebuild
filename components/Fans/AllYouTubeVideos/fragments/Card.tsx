@@ -31,16 +31,8 @@ const VideosGrid: FC<IAllYouTubeVideos.ICard> = ({
 					className={styles.image}
 					src={`${snippet?.thumbnails?.high?.url}`}
 					alt={`${snippet?.channelTitle}: ${snippet?.title}`}
-					width={
-						snippet?.thumbnails?.maxres?.width
-							? snippet?.thumbnails?.maxres?.width
-							: 1000
-					}
-					height={
-						snippet?.thumbnails?.maxres?.height
-							? snippet?.thumbnails?.maxres?.height
-							: 1000
-					}
+					width={snippet?.thumbnails?.maxres?.width || 1000}
+					height={snippet?.thumbnails?.maxres?.height || 1000}
 				/>
 				<div className={styles.content}>
 					<motion.h4

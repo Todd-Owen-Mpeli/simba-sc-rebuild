@@ -15,12 +15,12 @@ import HeroFour from "@/components/HeroFour/HeroFour";
 import HeroThree from "@/components/HeroThree/HeroThree";
 
 // Fans Pages
-import AllPodcastsVideos from "@/components/Fans/AllPodcastsVideos/index";
 import AllYoutubeVideos from "@/components/Fans/AllYouTubeVideos/AllYouTubeVideos";
 import LatestVideoBlock from "@/components/Fans/LatestVideoBlock/LatestVideoBlock";
+import AllPodcastsVideos from "@/components/Fans/AllPodcastsVideos/AllPodcastsVideos";
 
 // Other Components
-import VisitStore from "@/components/VisitStore/index";
+import VisitStore from "@/components/VisitStore/VisitStore";
 import ContactForm from "@/components/ContactForm/index";
 import LatestNewsGrid from "@/components/LatestNews/index";
 import SocialMediaGrid from "@/components/SocialMediaGrid";

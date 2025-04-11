@@ -20,6 +20,7 @@ import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/grap
 // Components: Fans
 import { LatestVideoBlock } from "@/components/Fans/LatestVideoBlock/graphql/index";
 import { AllYouTubeVideos } from "@/components/Fans/AllYouTubeVideos/graphql/index";
+import { AllPodcastsVideos } from "@/components/Fans/AllPodcastsVideos/graphql/index";
 
 // Components: Club Partners Flexible Content Post Types
 import { ImageSlider } from "@/components/ClubPartners/ImageSlider/graphql/index";
@@ -60,19 +61,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_VideoBlock {${VideoBlock}}
 											... on ${postTypeFlexibleContent}_LatestVideoBlock {${LatestVideoBlock}}
 											... on ${postTypeFlexibleContent}_AllYoutubeVideos {${AllYouTubeVideos}}
-											... on ${postTypeFlexibleContent}_AllPodcastsVideos {
-												fieldGroupName
-												displaySection
-												title
-												cta {
-													text
-													link {
-														url
-														title
-														target
-													}
-												}
-											}
+											... on ${postTypeFlexibleContent}_AllPodcastsVideos {${AllPodcastsVideos}}
 											... on ${postTypeFlexibleContent}_VisitStore {
 												fieldGroupName
 												displaySection
