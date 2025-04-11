@@ -1,12 +1,12 @@
 // Imports
 import {FC} from "react";
 import {motion} from "framer-motion";
-import {IVideoBlock} from "@/components/VideoBlock/types/index";
+import {IHeroFour} from "@/components/HeroFour/types/index";
 
 // Styling
-import styles from "@/styles/components/VideoBlock.module.scss";
+import styles from "@/components/HeroFour/styles/HeroFour.module.scss";
 
-const VideoCard: FC<IVideoBlock.IVideoCard> = ({video, displayVideo}) => {
+const VideoCard: FC<IHeroFour.IVideoCard> = ({video, displayVideo}) => {
     return (
         <motion.video
 			muted

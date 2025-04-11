@@ -20,11 +20,11 @@ import LatestVideoBlock from "@/components/Fans/LatestVideoBlock/index";
 import AllPodcastsVideos from "@/components/Fans/AllPodcastsVideos/index";
 
 // Other Components
-import VideoBlock from "@/components/VideoBlock/index";
 import VisitStore from "@/components/VisitStore/index";
 import ContactForm from "@/components/ContactForm/index";
 import LatestNewsGrid from "@/components/LatestNews/index";
 import SocialMediaGrid from "@/components/SocialMediaGrid";
+import VideoBlock from "@/components/VideoBlock/VideoBlock";
 import AboutSimba from "@/components/AboutSimba/AboutSimba";
 import NewsletterBanner from "@/components/NewsletterBanner";
 import SimbaTVBanner from "@/components/SimbaTVBanner/index";

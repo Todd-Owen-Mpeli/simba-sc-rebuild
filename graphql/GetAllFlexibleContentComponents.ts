@@ -9,6 +9,7 @@ import { CTATwo } from "@/components/CTATwo/graphql/index";
 import { HeroTwo } from "@/components/HeroTwo/graphql/index";
 import { HeroFour } from "@/components/HeroFour/graphql/index";
 import { HeroThree } from "@/components/HeroThree/graphql/index";
+import { VideoBlock } from "@/components/VideoBlock/graphql/index";
 import { AboutSimba } from "@/components/AboutSimba/graphql/index";
 import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
@@ -52,35 +53,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_OfficialMembershipsCta {${OfficialMembershipsCta}}
 											... on ${postTypeFlexibleContent}_SponsorsLogos {${SponsorsLogos}}
 											... on ${postTypeFlexibleContent}_ClubPartnersGrid {${ClubPartnersGrid}}
-											... on ${postTypeFlexibleContent}_VideoBlock {
-												fieldGroupName
-												displaySection
-												title
-												video {
-                  								  	link
-                  								  	title
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-												subtitle
-												paragraph
-												displayVideo
-												buttonLink {
-													url
-													title
-													target
-												}
-												videoBackgroundImage {
-													altText
-													sourceUrl
-													mediaDetails {
-														height
-														width
-													}
-												}
-											}
+											... on ${postTypeFlexibleContent}_VideoBlock {${VideoBlock}}
 											... on ${postTypeFlexibleContent}_LatestVideoBlock {
 												fieldGroupName
 												displaySection
