@@ -35,10 +35,10 @@ import TitleContentImage from "@/components/TitleContentImage/Index";
 import ClubCardMembershipCTA from "@/components/ClubCardMembershipCta";
 import TitleParagraph from "@/components/TitleParagraph/TitleParagraph";
 import LastThreeFixtures from "@/components/Fixtures/LastThreeFixtures";
-import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid";
 import AboutTheClubGrid from "@/components/AboutTheClubGrid/AboutTheClubGrid";
 import TitleParagraphDynamicColour from "@/components/TitleParagraphDynamicColour";
 import GeneralInformation from "@/components/GeneralInformation/GeneralInformation";
+import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid/ClubPartnersGrid";
 import OfficialMembershipsCta from "@/components/OfficialMembershipsCta/OfficialMembershipsCta";
 
 const RenderFlexibleContent: FC = () => {

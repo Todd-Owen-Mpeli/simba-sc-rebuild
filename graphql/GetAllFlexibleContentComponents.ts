@@ -15,6 +15,7 @@ import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
+import { ClubPartnersGrid } from "@/components/ClubPartners/ClubPartnersGrid/graphql/index";
 
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Flexible Content Components 
@@ -46,10 +47,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_GeneralInformation {${GeneralInformation}}
 											... on ${postTypeFlexibleContent}_OfficialMembershipsCta {${OfficialMembershipsCta}}
 											... on ${postTypeFlexibleContent}_SponsorsLogos {${SponsorsLogos}}
-											... on ${postTypeFlexibleContent}_ClubPartnersGrid {
-												fieldGroupName
-                  								displaySection
-											}
+											... on ${postTypeFlexibleContent}_ClubPartnersGrid {${ClubPartnersGrid}}
 											... on ${postTypeFlexibleContent}_VideoBlock {
 												fieldGroupName
 												displaySection

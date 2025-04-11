@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 import {ICTA} from "@/components/CTA/types/index";
 
 // Styling
-import styles from "@/components/HeroFour/styles/CTA.module.scss";
+import styles from "@/components/CTA/styles/CTA.module.scss";
 
 const VideoCard: FC<ICTA.IVideoCard> = ({video, displayVideo}) => {
     return (
