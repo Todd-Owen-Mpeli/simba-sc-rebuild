@@ -15,7 +15,11 @@ import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
+
+// Components: Club Partners Flexible Content Post Types
+import { ImageSlider } from "@/components/ClubPartners/ImageSlider/graphql/index";
 import { ClubPartnersGrid } from "@/components/ClubPartners/ClubPartnersGrid/graphql/index";
+import { TitleContentImage } from "@/components/ClubPartners/TitleContentImage/graphql/index";
 
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Flexible Content Components 
@@ -401,39 +405,8 @@ export const getAllClubPartnersFlexibleContentComponents = async (
 						node {
 							partnersContent {
 								flexibleContent {
-									... on ${postTypeFlexibleContent}_TitleContentImage {
-										fieldGroupName
-										displaySection
-										title
-										paragraph
-										buttonLink {
-											url
-											title
-											target
-										}
-										image {
-											altText
-              								sourceUrl
-              								mediaDetails {
-              									height
-              									width
-              								}
-										}
-									}
-									... on ${postTypeFlexibleContent}_ImageSlider {
-										fieldGroupName
-										displaySection
-										imageSlider {
-											image {
-												altText
-												sourceUrl
-												mediaDetails {
-													height
-													width
-												}
-											}
-										}
-									}
+									... on ${postTypeFlexibleContent}_ImageSlider {${ImageSlider}}
+									... on ${postTypeFlexibleContent}_TitleContentImage {${TitleContentImage}}
 								}
 							}
 						}

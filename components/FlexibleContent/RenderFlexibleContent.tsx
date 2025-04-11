@@ -38,8 +38,10 @@ import LastThreeFixtures from "@/components/Fixtures/LastThreeFixtures";
 import AboutTheClubGrid from "@/components/AboutTheClubGrid/AboutTheClubGrid";
 import TitleParagraphDynamicColour from "@/components/TitleParagraphDynamicColour";
 import GeneralInformation from "@/components/GeneralInformation/GeneralInformation";
-import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid/ClubPartnersGrid";
 import OfficialMembershipsCta from "@/components/OfficialMembershipsCta/OfficialMembershipsCta";
+
+// Components: Club Partners
+import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid/ClubPartnersGrid";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();
