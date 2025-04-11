@@ -15,6 +15,7 @@ import { VisitStore } from "@/components/VisitStore/graphql/index";
 import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
+import { TitleContentImage } from "@/components/TitleContentImage/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 import { TrophyCabinetBanner } from "@/components/TrophyCabinetBanner/graphql/index";
 import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
@@ -27,7 +28,7 @@ import { AllPodcastsVideos } from "@/components/Fans/AllPodcastsVideos/graphql/i
 // Components: Club Partners Flexible Content Post Types
 import { ImageSlider } from "@/components/ClubPartners/ImageSlider/graphql/index";
 import { ClubPartnersGrid } from "@/components/ClubPartners/ClubPartnersGrid/graphql/index";
-import { TitleContentImage } from "@/components/ClubPartners/TitleContentImage/graphql/index";
+import { ClubPartnersTitleContentImage } from "@/components/ClubPartners/TitleContentImage/graphql/index";
 
 /* PAGES & BLOGS POSTS*/
 /* Fetch all Flexible Content Components 
@@ -66,30 +67,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_AllPodcastsVideos {${AllPodcastsVideos}}
 											... on ${postTypeFlexibleContent}_VisitStore {${VisitStore}}
 											... on ${postTypeFlexibleContent}_TrophyCabinetBanner {${TrophyCabinetBanner}}
-											... on ${postTypeFlexibleContent}_TitleContentImage {
-            									fieldGroupName
-												displaySection
-            									title
-            									subtitle
-            									textTitle
-            									paragraph
-            									image {
-            										altText
-            										sourceUrl
-            										mediaDetails {
-            											height
-            											width
-            										}
-            									}
-            									buttonLink {
-            										url
-            										title
-            										target
-            									}
-            									displayContentOption
-            									displayParagraphColor
-            									displayBackgroundColor
-            								}
+											... on ${postTypeFlexibleContent}_TitleContentImage {${TitleContentImage}}
 											... on ${postTypeFlexibleContent}_TitleParagraphDynamicColour {
             									fieldGroupName
 												displaySection
@@ -291,7 +269,7 @@ export const getAllClubPartnersFlexibleContentComponents = async (
 							partnersContent {
 								flexibleContent {
 									... on ${postTypeFlexibleContent}_ImageSlider {${ImageSlider}}
-									... on ${postTypeFlexibleContent}_TitleContentImage {${TitleContentImage}}
+									... on ${postTypeFlexibleContent}_TitleContentImage {${ClubPartnersTitleContentImage}}
 								}
 							}
 						}

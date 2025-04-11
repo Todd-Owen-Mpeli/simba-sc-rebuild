@@ -1,5 +1,5 @@
 // ACF Flexible Content Component Post Type Query
-export const TitleContentImage = `
+export const ClubPartnersTitleContentImage = `
     fieldGroupName
 	displaySection
 	title
