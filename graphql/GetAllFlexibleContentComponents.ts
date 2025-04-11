@@ -4,12 +4,13 @@ import {DocumentNode, gql} from "@apollo/client";
 
 // Components: ACF Flexible Content Post Types
 import { CTA } from "@/components/CTA/graphql/index";
-import { CTATwo } from "@/components/CTATwo/graphql/index";
 import { Hero } from "@/components/Hero/graphql/index";
+import { CTATwo } from "@/components/CTATwo/graphql/index";
 import { HeroTwo } from "@/components/HeroTwo/graphql/index";
 import { HeroFour } from "@/components/HeroFour/graphql/index";
 import { HeroThree } from "@/components/HeroThree/graphql/index";
 import { AboutSimba } from "@/components/AboutSimba/graphql/index";
+import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 
 /* PAGES & BLOGS POSTS*/
@@ -36,13 +37,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_HeroFour {${HeroFour}}
 											... on ${postTypeFlexibleContent}_Cta {${CTA}}
 											... on ${postTypeFlexibleContent}_CtaTwo {${CTATwo}}
-											... on ${postTypeFlexibleContent}_TitleParagraph {
-												fieldGroupName
-												displaySection
-												title
-												paragraph
-												displayParagraph
-											}
+											... on ${postTypeFlexibleContent}_TitleParagraph {${TitleParagraph}}
 											... on ${postTypeFlexibleContent}_AboutSimba {${AboutSimba}}
 											... on ${postTypeFlexibleContent}_AboutTheClubGrid {${AboutTheClubGrid}}
 											... on ${postTypeFlexibleContent}_GeneralInformation {
