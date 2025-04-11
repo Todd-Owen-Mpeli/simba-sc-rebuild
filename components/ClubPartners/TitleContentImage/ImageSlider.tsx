@@ -1,5 +1,3 @@
-"use client";
-
 // Imports
 import {FC} from "react";
 import Link from "next/link";
@@ -25,7 +23,7 @@ const TitleContentImage: FC<ITitleContentImage.IProps> = ({
 	return (
 		<div className={styles.titleContentImage}>
 			<div className={styles.wrapper}>
-				<SlideInXLeftAnimation className="w-full lg:w-1/2 p-4">
+				<SlideInXLeftAnimation className={styles.leftSection}>
 					<div className={styles.content}>
 						<motion.h5
 							initial={initialTwo}
@@ -50,7 +48,7 @@ const TitleContentImage: FC<ITitleContentImage.IProps> = ({
 						</Link>
 					</div>
 				</SlideInXLeftAnimation>
-				<SlideInXRightAnimation className="w-full lg:w-1/2 p-4">
+				<SlideInXRightAnimation className={styles.rightSection}>
 					<Image
 						className={styles.image}
 						alt={image?.altText}
