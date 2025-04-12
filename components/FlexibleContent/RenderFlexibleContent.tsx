@@ -27,12 +27,12 @@ import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid/ClubPar
 
 // Other Components
 import ContactForm from "@/components/ContactForm/index";
-import LatestNewsGrid from "@/components/LatestNews/index";
 import VisitStore from "@/components/VisitStore/VisitStore";
 import VideoBlock from "@/components/VideoBlock/VideoBlock";
 import AboutSimba from "@/components/AboutSimba/AboutSimba";
 import SimbaTVBanner from "@/components/SimbaTVBanner/SimbaTVBanner";
 import SponsorsLogos from "@/components/SponsorsLogos/SponsorsLogos";
+import LatestNewsGrid from "@/components/LatestNewsGrid/LatestNewsGrid";
 import TitleParagraph from "@/components/TitleParagraph/TitleParagraph";
 import SocialMediaGrid from "@/components/SocialMediaGrid/SocialMediaGrid";
 import NewsletterBanner from "@/components/NewsletterBanner/NewsletterBanner";

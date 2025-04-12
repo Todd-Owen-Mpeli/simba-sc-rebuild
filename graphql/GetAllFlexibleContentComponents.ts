@@ -14,6 +14,7 @@ import { AboutSimba } from "@/components/AboutSimba/graphql/index";
 import { VisitStore } from "@/components/VisitStore/graphql/index";
 import { SimbaTVBanner } from "@/components/SimbaTVBanner/graphql/index";
 import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
+import { LatestNewsGrid } from "@/components/LatestNewsGrid/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { SocialMediaGrid } from "@/components/SocialMediaGrid/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
@@ -84,29 +85,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_SocialMediaGrid {${SocialMediaGrid}}
 											... on ${postTypeFlexibleContent}_LastThreeFixtures {${LastThreeFixtures}}
 											... on ${postTypeFlexibleContent}_NewOfficialKitCta {${NewOfficialKitCta}}
-											... on ${postTypeFlexibleContent}_LatestNewsGrid {
-												fieldGroupName
-                  								displaySection
-                  								title
-                  								ctaLink {
-                  								  	url
-                  								  	title
-                  								  	target
-                  								}
-                  								buttonLink {
-                  								  	url
-                  								  	title
-                  								  	target
-                  								}
-                  								image {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_LatestNewsGrid {${LatestNewsGrid}}
 											... on ${postTypeFlexibleContent}_ContactForm {
 												fieldGroupName
 												displaySection
