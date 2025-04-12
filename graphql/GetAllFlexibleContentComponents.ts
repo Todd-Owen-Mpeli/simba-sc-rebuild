@@ -15,6 +15,7 @@ import { VisitStore } from "@/components/VisitStore/graphql/index";
 import { SimbaTVBanner } from "@/components/SimbaTVBanner/graphql/index";
 import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
 import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
+import { SocialMediaGrid } from "@/components/SocialMediaGrid/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { NewsletterBanner } from "@/components/NewsletterBanner/graphql/index";
 import { TitleContentImage } from "@/components/TitleContentImage/graphql/index";
@@ -23,6 +24,9 @@ import { TrophyCabinetBanner } from "@/components/TrophyCabinetBanner/graphql/in
 import { ClubCardMembershipCTA } from "@/components/ClubCardMembershipCTA/graphql/index";
 import { OfficialMembershipsCta } from "@/components/OfficialMembershipsCta/graphql/index";
 import { TitleParagraphDynamicColour } from "@/components/TitleParagraphDynamicColour/graphql/index";
+
+// Components: Fixtures
+import { LastThreeFixtures } from "@/components/Fixtures/LastThreeFixtures/graphql/index";
 
 // Components: Fans
 import { LatestVideoBlock } from "@/components/Fans/LatestVideoBlock/graphql/index";
@@ -76,16 +80,8 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_ClubCardMembershipCta {${ClubCardMembershipCTA}}
 											... on ${postTypeFlexibleContent}_NewsletterBanner {${NewsletterBanner}}
 											... on ${postTypeFlexibleContent}_SimbatvBanner {${SimbaTVBanner}}
-											... on ${postTypeFlexibleContent}_SocialMediaGrid {
-												fieldGroupName
-												displaySection
-												title
-											}
-											... on ${postTypeFlexibleContent}_LastThreeFixtures {
-												fieldGroupName
-												displaySection
-												title
-											}
+											... on ${postTypeFlexibleContent}_SocialMediaGrid {${SocialMediaGrid}}
+											... on ${postTypeFlexibleContent}_LastThreeFixtures {${LastThreeFixtures}}
 											... on ${postTypeFlexibleContent}_NewOfficialKitCta {
 												fieldGroupName
                   								displaySection

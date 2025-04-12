@@ -3,7 +3,7 @@ import {FC} from "react";
 import {IHeroThree} from "@/components/HeroThree/types/index";
 
 // Styling
-import styles from "@/styles/components/Hero.module.scss";
+import styles from "@/components/HeroThree/styles/HeroThree.module.scss";
 
 // Components
 import Title from "@/components/Elements/Title";

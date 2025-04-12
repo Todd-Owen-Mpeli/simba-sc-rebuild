@@ -8,7 +8,6 @@ import {arrayLoopStaggerChildren, initial, stagger} from "@/animations/animation
 import styles from "@/components/ClubPartners/ClubPartnersGrid/styles/ClubPartnersGrid.module.scss";
 
 // Components
-import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 import Card from "@/components/ClubPartners/ClubPartnersGrid/fragments/Card";
 
 const ClubPartnersGrid: FC = () => {

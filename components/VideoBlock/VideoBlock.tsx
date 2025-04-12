@@ -12,7 +12,7 @@ import {motion} from "framer-motion";
 import {IVideoBlock} from "@/components/VideoBlock/types/index";
 
 // Styling
-import styles from "@/styles/components/VideoBlock.module.scss";
+import styles from "@/components/VideoBlock/styles/VideoBlock.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph/Paragraph";

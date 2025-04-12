@@ -4,7 +4,7 @@ import {motion} from "framer-motion";
 import {IVideoBlock} from "@/components/VideoBlock/types/index";
 
 // Styling
-import styles from "@/styles/components/VideoBlock.module.scss";
+import styles from "@/components/VideoBlock/styles/VideoBlock.module.scss";
 
 const VideoCard: FC<IVideoBlock.IVideoCard> = ({video, displayVideo}) => {
     return (

@@ -5,7 +5,7 @@ import {IHeroTwo} from "@/components/HeroTwo/types/index";
 import {fadeIn, initialTwo} from "@/animations/animations";
 
 // Styling
-import styles from "@/styles/components/HeroTwo.module.scss";
+import styles from "@/components/HeroTwo/styles/HeroTwo.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph/Paragraph";

@@ -14,7 +14,7 @@ import {FC, Fragment, Suspense} from "react";
 import {useGlobalContext} from "@/context/global";
 
 // Styling
-import styles from "@/styles/components/VisitStore.module.scss";
+import styles from "@/components/VisitStore/styles/VisitStore.module.scss";
 
 // Components
 import ScrollYProgressReveal from "@/components/Animations/ScrollYProgressReveal";

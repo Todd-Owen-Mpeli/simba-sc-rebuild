@@ -19,18 +19,23 @@ import AllYoutubeVideos from "@/components/Fans/AllYouTubeVideos/AllYouTubeVideo
 import LatestVideoBlock from "@/components/Fans/LatestVideoBlock/LatestVideoBlock";
 import AllPodcastsVideos from "@/components/Fans/AllPodcastsVideos/AllPodcastsVideos";
 
+// Components: Fixtures
+import LastThreeFixtures from "@/components/Fixtures/LastThreeFixtures/LastThreeFixtures";
+
+// Components: Club Partners
+import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid/ClubPartnersGrid";
+
 // Other Components
-import VisitStore from "@/components/VisitStore/VisitStore";
 import ContactForm from "@/components/ContactForm/index";
 import LatestNewsGrid from "@/components/LatestNews/index";
-import SocialMediaGrid from "@/components/SocialMediaGrid";
+import VisitStore from "@/components/VisitStore/VisitStore";
 import VideoBlock from "@/components/VideoBlock/VideoBlock";
 import AboutSimba from "@/components/AboutSimba/AboutSimba";
 import NewOfficialKitCta from "@/components/NewOfficialKitCta";
 import SimbaTVBanner from "@/components/SimbaTVBanner/SimbaTVBanner";
 import SponsorsLogos from "@/components/SponsorsLogos/SponsorsLogos";
 import TitleParagraph from "@/components/TitleParagraph/TitleParagraph";
-import LastThreeFixtures from "@/components/Fixtures/LastThreeFixtures";
+import SocialMediaGrid from "@/components/SocialMediaGrid/SocialMediaGrid";
 import NewsletterBanner from "@/components/NewsletterBanner/NewsletterBanner";
 import AboutTheClubGrid from "@/components/AboutTheClubGrid/AboutTheClubGrid";
 import TitleContentImage from "@/components/TitleContentImage/TitleContentImage";
@@ -39,9 +44,6 @@ import TrophyCabinetBanner from "@/components/TrophyCabinetBanner/TrophyCabinetB
 import ClubCardMembershipCTA from "@/components/ClubCardMembershipCta/ClubCardMembershipCTA";
 import OfficialMembershipsCta from "@/components/OfficialMembershipsCta/OfficialMembershipsCta";
 import TitleParagraphDynamicColour from "@/components/TitleParagraphDynamicColour/TitleParagraphDynamicColour";
-
-// Components: Club Partners
-import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid/ClubPartnersGrid";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();
