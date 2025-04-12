@@ -18,6 +18,7 @@ import { TitleParagraph } from "@/components/TitleParagraph/graphql/index";
 import { SocialMediaGrid } from "@/components/SocialMediaGrid/graphql/index";
 import { AboutTheClubGrid } from "@/components/AboutTheClubGrid/graphql/index";
 import { NewsletterBanner } from "@/components/NewsletterBanner/graphql/index";
+import { NewOfficialKitCta } from "@/components/NewOfficialKitCta/graphql/index";
 import { TitleContentImage } from "@/components/TitleContentImage/graphql/index";
 import { GeneralInformation } from "@/components/GeneralInformation/graphql/index";
 import { TrophyCabinetBanner } from "@/components/TrophyCabinetBanner/graphql/index";
@@ -82,33 +83,7 @@ export const getAllFlexibleContentComponents = async (
 											... on ${postTypeFlexibleContent}_SimbatvBanner {${SimbaTVBanner}}
 											... on ${postTypeFlexibleContent}_SocialMediaGrid {${SocialMediaGrid}}
 											... on ${postTypeFlexibleContent}_LastThreeFixtures {${LastThreeFixtures}}
-											... on ${postTypeFlexibleContent}_NewOfficialKitCta {
-												fieldGroupName
-                  								displaySection
-                  								title
-												ctaTitle
-                  								link {
-                  								  	url
-                  								  	title
-                  								  	target
-                  								}
-                  								image {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-												imageTwo {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_NewOfficialKitCta {${NewOfficialKitCta}}
 											... on ${postTypeFlexibleContent}_LatestNewsGrid {
 												fieldGroupName
                   								displaySection
