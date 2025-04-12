@@ -26,10 +26,10 @@ import LastThreeFixtures from "@/components/Fixtures/LastThreeFixtures/LastThree
 import ClubPartnersGrid from "@/components/ClubPartners/ClubPartnersGrid/ClubPartnersGrid";
 
 // Other Components
-import ContactForm from "@/components/ContactForm/index";
 import VisitStore from "@/components/VisitStore/VisitStore";
 import VideoBlock from "@/components/VideoBlock/VideoBlock";
 import AboutSimba from "@/components/AboutSimba/AboutSimba";
+import ContactForm from "@/components/ContactForm/ContactForm";
 import SimbaTVBanner from "@/components/SimbaTVBanner/SimbaTVBanner";
 import SponsorsLogos from "@/components/SponsorsLogos/SponsorsLogos";
 import LatestNewsGrid from "@/components/LatestNewsGrid/LatestNewsGrid";

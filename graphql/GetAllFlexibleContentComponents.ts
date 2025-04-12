@@ -12,6 +12,7 @@ import { HeroThree } from "@/components/HeroThree/graphql/index";
 import { VideoBlock } from "@/components/VideoBlock/graphql/index";
 import { AboutSimba } from "@/components/AboutSimba/graphql/index";
 import { VisitStore } from "@/components/VisitStore/graphql/index";
+import { ContactForm } from "@/components/ContactForm/graphql/index";
 import { SimbaTVBanner } from "@/components/SimbaTVBanner/graphql/index";
 import { SponsorsLogos } from "@/components/SponsorsLogos/graphql/index";
 import { LatestNewsGrid } from "@/components/LatestNewsGrid/graphql/index";
@@ -58,49 +59,35 @@ export const getAllFlexibleContentComponents = async (
 								... on DefaultTemplate {
 									flexibleContent {
 										flexibleContent {
-											... on ${postTypeFlexibleContent}_Hero {${Hero}}
-											... on ${postTypeFlexibleContent}_HeroTwo {${HeroTwo}}
-											... on ${postTypeFlexibleContent}_HeroThree {${HeroThree}}
-											... on ${postTypeFlexibleContent}_HeroFour {${HeroFour}}
 											... on ${postTypeFlexibleContent}_Cta {${CTA}}
+											... on ${postTypeFlexibleContent}_Hero {${Hero}}
 											... on ${postTypeFlexibleContent}_CtaTwo {${CTATwo}}
-											... on ${postTypeFlexibleContent}_TitleParagraph {${TitleParagraph}}
+											... on ${postTypeFlexibleContent}_HeroTwo {${HeroTwo}}
+											... on ${postTypeFlexibleContent}_HeroFour {${HeroFour}}
+											... on ${postTypeFlexibleContent}_HeroThree {${HeroThree}}
 											... on ${postTypeFlexibleContent}_AboutSimba {${AboutSimba}}
-											... on ${postTypeFlexibleContent}_AboutTheClubGrid {${AboutTheClubGrid}}
-											... on ${postTypeFlexibleContent}_GeneralInformation {${GeneralInformation}}
-											... on ${postTypeFlexibleContent}_OfficialMembershipsCta {${OfficialMembershipsCta}}
-											... on ${postTypeFlexibleContent}_SponsorsLogos {${SponsorsLogos}}
-											... on ${postTypeFlexibleContent}_ClubPartnersGrid {${ClubPartnersGrid}}
 											... on ${postTypeFlexibleContent}_VideoBlock {${VideoBlock}}
+											... on ${postTypeFlexibleContent}_VisitStore {${VisitStore}}
+											... on ${postTypeFlexibleContent}_ContactForm {${ContactForm}}
+											... on ${postTypeFlexibleContent}_SponsorsLogos {${SponsorsLogos}}
+											... on ${postTypeFlexibleContent}_SimbatvBanner {${SimbaTVBanner}}
+											... on ${postTypeFlexibleContent}_TitleParagraph {${TitleParagraph}}
+											... on ${postTypeFlexibleContent}_LatestNewsGrid {${LatestNewsGrid}}
+											... on ${postTypeFlexibleContent}_SocialMediaGrid {${SocialMediaGrid}}
+											... on ${postTypeFlexibleContent}_AboutTheClubGrid {${AboutTheClubGrid}}
+											... on ${postTypeFlexibleContent}_ClubPartnersGrid {${ClubPartnersGrid}}
 											... on ${postTypeFlexibleContent}_LatestVideoBlock {${LatestVideoBlock}}
 											... on ${postTypeFlexibleContent}_AllYoutubeVideos {${AllYouTubeVideos}}
-											... on ${postTypeFlexibleContent}_AllPodcastsVideos {${AllPodcastsVideos}}
-											... on ${postTypeFlexibleContent}_VisitStore {${VisitStore}}
-											... on ${postTypeFlexibleContent}_TrophyCabinetBanner {${TrophyCabinetBanner}}
-											... on ${postTypeFlexibleContent}_TitleContentImage {${TitleContentImage}}
-											... on ${postTypeFlexibleContent}_TitleParagraphDynamicColour {${TitleParagraphDynamicColour}}
-											... on ${postTypeFlexibleContent}_ClubCardMembershipCta {${ClubCardMembershipCTA}}
 											... on ${postTypeFlexibleContent}_NewsletterBanner {${NewsletterBanner}}
-											... on ${postTypeFlexibleContent}_SimbatvBanner {${SimbaTVBanner}}
-											... on ${postTypeFlexibleContent}_SocialMediaGrid {${SocialMediaGrid}}
+											... on ${postTypeFlexibleContent}_AllPodcastsVideos {${AllPodcastsVideos}}
+											... on ${postTypeFlexibleContent}_TitleContentImage {${TitleContentImage}}
 											... on ${postTypeFlexibleContent}_LastThreeFixtures {${LastThreeFixtures}}
 											... on ${postTypeFlexibleContent}_NewOfficialKitCta {${NewOfficialKitCta}}
-											... on ${postTypeFlexibleContent}_LatestNewsGrid {${LatestNewsGrid}}
-											... on ${postTypeFlexibleContent}_ContactForm {
-												fieldGroupName
-												displaySection
-												title
-												formTitle
-												paragraph
-												image {
-                  								  	altText
-                  								  	sourceUrl
-                  								  	mediaDetails {
-                  								  	  	height
-                  								  	  	width
-                  								  	}
-                  								}
-											}
+											... on ${postTypeFlexibleContent}_GeneralInformation {${GeneralInformation}}
+											... on ${postTypeFlexibleContent}_TrophyCabinetBanner {${TrophyCabinetBanner}}
+											... on ${postTypeFlexibleContent}_ClubCardMembershipCta {${ClubCardMembershipCTA}}
+											... on ${postTypeFlexibleContent}_OfficialMembershipsCta {${OfficialMembershipsCta}}
+											... on ${postTypeFlexibleContent}_TitleParagraphDynamicColour {${TitleParagraphDynamicColour}}
 										}
 									}
 								}
