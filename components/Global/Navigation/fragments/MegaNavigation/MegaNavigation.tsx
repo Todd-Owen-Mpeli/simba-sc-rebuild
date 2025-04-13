@@ -135,12 +135,12 @@ const MegaNavigation: FC<INavbar.IMegaNavigation> = ({ menuActive, setMenuActive
         <div
             className={
                 menuActive
-                    ? styles.megaNavigation + " megaMenu-active"
+                    ? styles.megaMenuActive
                     : styles.megaNavigation + " megaMenu hidden"
             }
         >
             <div
-                className={"megaMenu-content" + styles.megaMenuContent}
+                className={styles.megaMenuContent}
                 style={{
                     backgroundImage: `linear-gradient(
                         0deg,rgba(234, 29, 37, 0), rgba(234, 29, 37, 0), rgba(234, 29, 37, 0),

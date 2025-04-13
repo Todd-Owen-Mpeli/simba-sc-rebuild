@@ -46,7 +46,7 @@ const BackPageButton: FC<IBackHoverButton> = ({link}) => {
 							fill="#ffffff"
 							viewBox="0 0 24 24"
 							xmlns="http://www.w3.org/2000/svg"
-							className="w-[30px] h-[30px] object-center object-contain rotate-[0deg]"
+							className={styles.svg}
 						>
 							<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
 							<g

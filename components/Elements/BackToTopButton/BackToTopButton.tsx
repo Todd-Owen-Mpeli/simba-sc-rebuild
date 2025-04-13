@@ -45,25 +45,24 @@ const BackToTopButton: FC<IBackHoverButton> = ({link}) => {
 				>
 					<span className={styles.span}>
 						<svg
-							height="35"
-							width="30.237"
+							id="Layer_1"
+							width="200px"
+							version="1.1"
+							height="200px"
+							fill="#ffffff"
+							viewBox="0 0 24 24"
 							className={styles.svg}
-							viewBox="0 0 30.237 35"
 							xmlns="http://www.w3.org/2000/svg"
 						>
-							<g transform="translate(-4906.763 143)">
-								<path
-									d="M49.5,35a17.45,17.45,0,0,1-12.737-5.5h2.153a16,16,0,0,0,21.9-23.314,15.971,15.971,0,0,0-21.9-.687H36.763A17.5,17.5,0,1,1,49.5,35Z"
-									transform="translate(4870 -143)"
-									fill="#ffffff"
-								></path>
-								<g transform="translate(4890.311 -1111.861)">
-									<path
-										d="M36.2,985.886,32.392,981.6a.714.714,0,1,0-1.064.952l2.753,3.1H24.714a.714.714,0,1,0,0,1.428h9.367l-2.753,3.1a.731.731,0,0,0,.056,1.015.722.722,0,0,0,1.007-.063l3.809-4.286A.722.722,0,0,0,36.2,985.886Z"
-										transform="translate(0 0)"
-										fill="#ffffff"
-									></path>
-								</g>
+							<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								{" "}
+								<polygon points="12,17 11,17 11,15 9,15 9,13 21,13 21,11 9,11 9,9 11,9 11,7 12,7 12,5 9,5 9,7 7,7 7,9 5,9 5,10 4,10 4,11 3,11 3,13 4,13 4,14 5,14 5,15 7,15 7,17 9,17 9,19 12,19 "></polygon>{" "}
 							</g>
 						</svg>
 					</span>
