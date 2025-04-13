@@ -51,14 +51,14 @@ const CountUpStats: FC<ISimbaTVBanner.ICountUpStats> = ({
 				initial={initialTwo}
 				whileInView={fadeIn}
 				viewport={{once: true}}
-				className="font-OnestBlack text-center uppercase text-[16vw] md:text-[5vw] tracking-[-0.02rem] text-white font-semibold"
+				className="font-secondaryBlack text-center uppercase text-[16vw] md:text-[5vw] tracking-[-0.02rem] text-white font-semibold"
 			>
 				<span ref={ref}></span>
 				{suffix ? suffix : <></>}
 			</motion.h4>
 			<Paragraph
 				content={paragraph}
-				className="font-OnestBlack uppercase leading-tight text-lightGreyTwo text-paragraph lg:text-lg text-center"
+				className="font-secondaryBlack uppercase leading-tight text-lightGreyTwo text-paragraph lg:text-lg text-center"
 			/>
 		</div>
 	);

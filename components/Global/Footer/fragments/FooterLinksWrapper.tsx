@@ -6,7 +6,7 @@ import {IFooter} from "@/components/Global/Footer/types/index";
 import { initial, stagger, arrayLoopStaggerChildren} from "@/animations/animations";
 
 // Styling
-import styles from "@/components/Global/Footer/styles/Navbar.module.scss";
+import styles from "@/components/Global/Footer/styles/Footer.module.scss";
 
 // Components
 import ContentSliceRevealMaskAnimation from "@/components/Animations/ContentSliceRevealMaskAnimation";

@@ -5,7 +5,7 @@
 		@apply w-full;
 
 		.title {
-			@apply w-full mb-10 max-w-3xl mx-auto font-schaboCondensed text-center uppercase text-7xl sm:text-8xl tracking-[-0.05rem] text-pureBlack leading-tight xl:leading-[4.5rem];
+			@apply w-full mb-10 max-w-3xl mx-auto font-primary text-center uppercase text-7xl sm:text-8xl tracking-[-0.05rem] text-pureBlack leading-tight xl:leading-[4.5rem];
 
 			span {
 				@apply text-primary-default;

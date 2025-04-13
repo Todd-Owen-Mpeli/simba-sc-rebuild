@@ -12,7 +12,7 @@ import {useGlobalContext} from "@/context/global";
 import {ILastThreeFixtures} from "@/components/Fixtures/LastThreeFixtures/types/index";
 
 // Styling
-import styles from "@/components/LastThreeFixtures/styles/LastThreeFixtures.module.scss";
+import styles from "@/components/Fixtures/LastThreeFixtures/styles/LastThreeFixtures.module.scss";
 
 // Components
 import Card from "@/components/Fixtures/LastThreeFixtures/fragments/Card";

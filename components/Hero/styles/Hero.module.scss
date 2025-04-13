@@ -20,11 +20,11 @@
                             @apply max-w-full lg:max-w-xl 2xl:max-w-5xl mx-auto lg:mx-0;
 
                             .title {
-                                @apply font-OnestBlack text-center lg:text-left uppercase text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl tracking-[-0.02rem] text-white font-semibold leading-[0.90];
+                                @apply font-secondaryBlack text-center lg:text-left uppercase text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl tracking-[-0.02rem] text-white font-semibold leading-[0.90];
                             }
 
                             .paragraph {
-                                @apply max-w-xl mx-auto lg:mx-0 py-2 font-OnestRegular leading-tight text-white text-lg text-center lg:text-left;
+                                @apply max-w-xl mx-auto lg:mx-0 py-2 font-secondaryRegular leading-tight text-white text-lg text-center lg:text-left;
                             }
                         }
 

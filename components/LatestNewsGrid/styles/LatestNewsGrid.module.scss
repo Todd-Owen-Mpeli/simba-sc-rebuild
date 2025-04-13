@@ -2,7 +2,7 @@
 	@apply bg-pureBlack px-4 py-14 lg:px-10 mx-auto flex flex-col gap-8;
 
 	.title {
-		@apply font-schaboCondensed text-center lg:text-left uppercase text-7xl sm:text-8xl tracking-[-0.05rem] text-white leading-tight;
+		@apply font-primary text-center lg:text-left uppercase text-7xl sm:text-8xl tracking-[-0.05rem] text-white leading-tight;
 	}
 
 	.buttonLink {
@@ -30,7 +30,7 @@
 					@apply max-w-xs mx-0 flex flex-col gap-2;
 
 					.date {
-						@apply font-OnestRegular font-normal text-white text-tiny;
+						@apply font-secondaryRegular font-normal text-white text-tiny;
 					}
 
 					.divider {
@@ -38,7 +38,7 @@
 					}
 
 					.title {
-						@apply font-OnestBlack text-left uppercase text-base tracking-[-0.02rem] text-white font-semibold leading-4;
+						@apply font-secondaryBlack text-left uppercase text-base tracking-[-0.02rem] text-white font-semibold leading-4;
 					}
 				}
 			}

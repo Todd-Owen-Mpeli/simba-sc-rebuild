@@ -7,7 +7,7 @@ import {useGlobalContext} from "@/context/global";
 import {fadeIn, initialTwo} from "@/animations/animations";	
 
 // Styling
-import styles from "@/components/Error/styles/Error.module.scss";
+import styles from "@/components/Global/Error/styles/Error.module.scss";
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph/Paragraph";
