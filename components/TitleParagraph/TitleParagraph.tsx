@@ -13,6 +13,7 @@ import styles from "@/components/TitleParagraph/styles/TitleParagraph.module.scs
 
 // Components
 import Paragraph from "@/components/Elements/Paragraph/Paragraph";
+import ScrollYProgressReveal from "@/components/Animations/ScrollYProgressReveal";
 
 type ITitleParagraph = {
 	title: string;
@@ -26,32 +27,39 @@ const TitleParagraph: FC<ITitleParagraph> = ({
 	displayParagraph,
 }) => {
 	return (
-		<div className={styles.titleParagraph}>
-			<motion.h2
+		<ScrollYProgressReveal className={styles.titleParagraph}>
+			<motion.div
 				initial={initial}
 				whileInView={fadeInUp}
 				viewport={{once: true}}
-				className={title ? styles.title : "hidden"}
+				className={styles.container}
 			>
-				{title}
-			</motion.h2>
-			<Paragraph
-				fadeIn={false}
-				content={paragraph}
-				offsetStart={offsetStart}
-				offsetFinish={offsetFinish}
-				className={
-					paragraph
-						? styles.paragraph +
-						  ` ${
-								displayParagraph
-									? "text-center lg:text-center"
-									: "text-center lg:text-left"
-						  }`
-						: "hidden"
-				}
-			/>
-		</div>
+				<motion.h2
+					initial={initial}
+					whileInView={fadeInUp}
+					viewport={{once: true}}
+					className={title ? styles.title : "hidden"}
+				>
+					{title}
+				</motion.h2>
+				<Paragraph
+					fadeIn={false}
+					content={paragraph}
+					offsetStart={offsetStart}
+					offsetFinish={offsetFinish}
+					className={
+						paragraph
+							? styles.paragraph +
+							` ${
+									displayParagraph
+										? "text-center lg:text-center"
+										: "text-center lg:text-left"
+							}`
+							: "hidden"
+					}
+				/>
+			</motion.div>
+		</ScrollYProgressReveal>
 	);
 };
 
