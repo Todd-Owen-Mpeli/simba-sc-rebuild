@@ -1,8 +1,10 @@
+"use client";
+
 // Imports
 import {FC} from "react";
-import {motion} from "framer-motion";
-import {IError} from "@/components/Error/types/index";
-import {fadeIn, initialTwo} from "@/animations/animations";
+import { motion } from "framer-motion";
+import {useGlobalContext} from "@/context/global";
+import {fadeIn, initialTwo} from "@/animations/animations";	
 
 // Styling
 import styles from "@/components/Error/styles/Error.module.scss";
@@ -10,13 +12,16 @@ import styles from "@/components/Error/styles/Error.module.scss";
 // Components
 import Paragraph from "@/components/Elements/Paragraph/Paragraph";
 
-const Error: FC<IError.IProps> = ({title, paragraph, backgroundImage}) => {
+const Error: FC = () => {
+	const globalContext = useGlobalContext();
+	
 	return (
 		<div className={styles.Error}>
 			<div
 				className={styles.container}
 				style={{
-					backgroundImage: `linear-gradient(0deg,rgba(234, 29, 37, 0),rgba(234, 29, 37, 0.5),rgba(234, 29, 37, 0.80)),url("${backgroundImage?.sourceUrl}")`,
+					backgroundImage: `linear-gradient(0deg,rgba(234, 29, 37, 0),
+					rgba(234, 29, 37, 0.5),rgba(234, 29, 37, 0.80)),url("${globalContext?.themesOptionsContent?.errorPageContent?.backgroundImage?.sourceUrl}")`,
 				}}
 			>
 				<div className={styles.content}>
@@ -26,9 +31,12 @@ const Error: FC<IError.IProps> = ({title, paragraph, backgroundImage}) => {
 						viewport={{once: true}}
 						className={styles.title}
 					>
-						{title}
+						{globalContext?.themesOptionsContent?.errorPageContent?.title}
 					</motion.h1>
-					<Paragraph content={paragraph} className={styles.paragraph} />
+					<Paragraph
+						className={styles.paragraph}
+						content={globalContext?.themesOptionsContent?.errorPageContent?.paragraph}
+					/>
 				</div>
 			</div>
 		</div>
