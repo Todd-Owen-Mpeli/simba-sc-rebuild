@@ -8,7 +8,7 @@ import {IBusinessEmail, ICustomerEmail} from "@/components/Emails/types/index";
 import CustomerEnquiryConfirmationEmail from "@/components/Emails/CustomerEnquiryConfirmationEmail";
 import BusinessCustomerEnquiryConfirmationEmail from "@/components/Emails/BusinessCustomerEnquiryConfirmationEmail";
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request | any, res: Response | any) {
 	const data = await req.json();
 
 	// If any of these values are undefined
@@ -57,7 +57,7 @@ export async function POST(req: Request, res: Response) {
 		);
 
 		/* Customer Enquiry Confirmation Email */
-		const customerEmail: ICustomerEmail = {
+		const customerEmail: ICustomerEmail | any = {
 			from: `${themesOptionsContent?.email}`,
 			to: `${data?.email}`,
 			subject: `Thank You for Contacting Simba SC`,
@@ -65,7 +65,7 @@ export async function POST(req: Request, res: Response) {
 		};
 
 		/* Business Customer Enquiry Confirmation Email */
-		const businessEmail: IBusinessEmail = {
+		const businessEmail: IBusinessEmail | any = {
 			from: `${themesOptionsContent?.email}`,
 			to: `${themesOptionsContent?.email}`,
 			subject: `New Website Inquiry: ${data?.subject}`,

@@ -5,6 +5,7 @@ import { FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { initialTwo, fadeIn } from "@/animations/animations";
 import {IAboutTheClubGrid} from "@/components/AboutTheClubGrid/types/index";
 
 // Styling

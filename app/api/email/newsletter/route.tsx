@@ -7,7 +7,7 @@ import {getThemesOptionsContent} from "@/graphql/GetAllThemesOptions";
 // Components
 import NewsletterEnquiryConfirmationEmail from "@/components/Emails/NewsletterEnquiryConfirmationEmail";
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: Request | any, res: Response | any) {
 	const data = await req.json();
 
 	// If any of these values are undefined
@@ -30,7 +30,7 @@ export async function POST(req: Request, res: Response) {
 		);
 
 		/* NewsletterConfirmation Email */
-		const newsletterEmail: INewsletterEmail = {
+		const newsletterEmail: INewsletterEmail | any = {
 			from: `${themesOptionsContent?.email}`,
 			to: `${themesOptionsContent?.email}`,
 			subject: `Thank You for Contacting Simba SC`,
