@@ -20,7 +20,7 @@ import {INavbar} from "@/components/Global/Navigation/types/index";
 import styles from "@/components/Global/Navigation/styles/Navbar.module.scss";
 
 // Components
-import TopNavigation from "@/components/Global/Navigation/fragments/TopNavigation";
+import TopNavigation from "@/components/Global/Navigation/fragments/TopNavigation/TopNavigation";
 import MegaNavigation from "@/components/Global/Navigation/fragments/MegaNavigation/MegaNavigation";
 
 const Navbar: FC<INavbar.IProps> = () => {

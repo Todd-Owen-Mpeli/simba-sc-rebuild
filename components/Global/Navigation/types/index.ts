@@ -31,4 +31,14 @@ export namespace INavbar {
 		resetMenu: () => void;
 		displaySublinks: () => void;
 	};
+	export namespace ITopNavigation {
+		export type IProps = {};
+		export type ISocialLinksWrapper = {
+			socialLinks: {
+				url: string;
+				title: string;
+				target: string;
+			};
+		};
+	};
 }
