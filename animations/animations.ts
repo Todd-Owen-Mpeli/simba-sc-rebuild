@@ -76,6 +76,21 @@ export const arrayLoopStaggerChildren: IAnimation.IArrayLoopStaggerChildren = {
 		},
 	}),
 };
+export const navigationMenuStaggerChildren: IAnimation.IArrayLoopStaggerChildren = {
+	initial: {
+		opacity: 0,
+		y: 0,
+	},
+	animate: (keys: number) => ({
+		opacity: 1,
+		y: 0,
+		transition: {
+			delay: 0.25 * keys,
+			duration: 0.5,
+			ease: "easeInOut",
+		},
+	}),
+};
 
 // Slide In Direction (Horizontal)
 export const slideInRightInitial: IAnimation.ISlideInRightInitial | any = {
