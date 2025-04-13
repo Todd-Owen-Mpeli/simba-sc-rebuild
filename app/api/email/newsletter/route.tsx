@@ -1,7 +1,7 @@
 import {render} from "@react-email/components";
 import {emailTransporter} from "@/config/nodemailer";
 // Types
-import {INewsletterEmail} from "@/types/email";
+import {INewsletterEmail} from "@/components/Emails/types/index";
 import {getThemesOptionsContent} from "@/graphql/GetAllThemesOptions";
 
 // Components
@@ -21,7 +21,7 @@ export async function POST(req: Request, res: Response) {
 
 		/* Render React Newsletter
 			 Confirmation Email Component*/
-		const newsletterEmailHtml: string = render(
+		const newsletterEmailHtml: any = render(
 			<NewsletterEnquiryConfirmationEmail
 				email={`${data?.email}`}
 				imagesDirUrl={imagesDirUrl}

@@ -1,8 +1,8 @@
 import {render} from "@react-email/components";
 import {emailTransporter} from "@/config/nodemailer";
 // Types
-import {IBusinessEmail, ICustomerEmail} from "@/types/email";
 import {getThemesOptionsContent} from "@/graphql/GetAllThemesOptions";
+import {IBusinessEmail, ICustomerEmail} from "@/components/Emails/types/index";
 
 // Components
 import CustomerEnquiryConfirmationEmail from "@/components/Emails/CustomerEnquiryConfirmationEmail";
@@ -29,7 +29,7 @@ export async function POST(req: Request, res: Response) {
 
 		/* Render React Customer Enquiry
 			Confirmation Email Component*/
-		const customerEmailHtml: string = render(
+		const customerEmailHtml: any = render(
 			<CustomerEnquiryConfirmationEmail
 				email={`${data?.email}`}
 				imagesDirUrl={imagesDirUrl}
@@ -43,7 +43,7 @@ export async function POST(req: Request, res: Response) {
 
 		/* Render React Business Customer
 			Enquiry Confirmation Email Component*/
-		const businessEmailHtml: string = render(
+		const businessEmailHtml: any = render(
 			<BusinessCustomerEnquiryConfirmationEmail
 				email={`${data?.email}`}
 				imagesDirUrl={imagesDirUrl}
