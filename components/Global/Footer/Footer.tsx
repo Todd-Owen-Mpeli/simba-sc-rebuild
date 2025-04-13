@@ -6,11 +6,10 @@ import {
 	stagger,
 	initial,
 	initialTwo,
-	arrayLoopStaggerChildren,
 } from "@/animations/animations";
+import {FC} from "react";
 import Link from "next/link";
 import Image from "next/image";
-import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import { useGlobalContext } from "@/context/global";
 
