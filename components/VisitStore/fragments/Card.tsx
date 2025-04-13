@@ -28,14 +28,14 @@ const Card: FC = () => {
 					globalContext?.onlineStoreShirts
 						?.slice(0, 4)
 						?.map((item: any, index: number) => (
-							<Fragment key={item?.id ? item?.id : index}>
+							<Fragment key={item?.id || index}>
 								<ScrollYProgressReveal className={styles.content}>
 									<motion.li
 										initial={initial}
 										whileInView="animate"
 										className={styles.li}
 										viewport={{once: true}}
-										custom={item?.id ? item?.id : index}
+										custom={item?.id || index}
 										variants={arrayLoopStaggerChildren}
 									>
 										<Link
@@ -66,10 +66,7 @@ const Card: FC = () => {
 													</span>
 													<span>{item?.price}</span>
 												</div>
-												<Link
-													target="_blank"
-													aria-label={`${item?.title}`}
-													href={`store.simbasc.co.tz/${item?.slug}`}
+												<span
 													className={`${
 														item?.slug
 															? styles.slugLink +
@@ -78,7 +75,7 @@ const Card: FC = () => {
 													}`}
 												>
 													Buy Now
-												</Link>
+												</span>
 											</div>
 										</Link>
 									</motion.li>
