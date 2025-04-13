@@ -1,6 +1,6 @@
 // Imports
-import { FC } from "react";
 import Link from "next/link";
+import {FC, Fragment} from "react";
 import { motion } from "framer-motion";
 import {IFooter} from "@/components/Global/Footer/types/index";
 import { initial, stagger, arrayLoopStaggerChildren} from "@/animations/animations";
@@ -22,24 +22,26 @@ const FooterLinksWrapper: FC<IFooter.IFooterLinksWrapper> = ({sublinks}) => {
             {sublinks?.length > 0 ? (
                 sublinks?.map(
                     (item: any, index: number) => (
-                        <motion.li
-                            custom={index}
-							initial={initial}
-							whileInView="animate"
-							viewport={{once: true}}
-							variants={arrayLoopStaggerChildren}
-                        >
-                            <ContentSliceRevealMaskAnimation>
-                                <Link
-                                    className={styles.link}
-                                    href={`${item?.node?.url}`}
-                                    aria-label={`${item?.node?.label}`}
-                                    target={item?.node?.target || "_self"}
-                                >
-                                    {item?.node?.label}
-                                </Link>
-                            </ContentSliceRevealMaskAnimation>
-                        </motion.li>
+                        <Fragment key={index}>
+                            <motion.li
+                                custom={index}
+                                initial={initial}
+                                whileInView="animate"
+                                viewport={{once: true}}
+                                variants={arrayLoopStaggerChildren}
+                            >
+                                <ContentSliceRevealMaskAnimation>
+                                    <Link
+                                        className={styles.link}
+                                        href={`${item?.node?.url}`}
+                                        aria-label={`${item?.node?.label}`}
+                                        target={item?.node?.target || "_self"}
+                                    >
+                                        {item?.node?.label}
+                                    </Link>
+                                </ContentSliceRevealMaskAnimation>
+                            </motion.li>
+                        </Fragment>
                     )
                 )
             ) : (

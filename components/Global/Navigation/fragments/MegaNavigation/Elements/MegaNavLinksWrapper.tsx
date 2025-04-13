@@ -1,6 +1,6 @@
 // Imports
-import { FC } from "react";
 import Link from "next/link";
+import {FC, Fragment} from "react";
 import { motion } from "framer-motion";
 import {INavbar} from "@/components/Global/Navigation/types/index";
 import { initial, stagger, navigationMenuStaggerChildren} from "@/animations/animations";
@@ -22,25 +22,27 @@ const MegaNavLinksWrapper: FC<INavbar.IMegaNavLinksWrapper> = ({sublinks, resetM
             {sublinks?.length > 0 ? (
                 sublinks?.map(
                     (item: any, index: number) => (
-                        <motion.li
-                            custom={index}
-                            initial={initial}
-                            className="self-end"
-                            whileInView="animate"
-                            variants={navigationMenuStaggerChildren}
-                        >
-                            <ContentSliceRevealMaskAnimation>
-                                <Link
-                                    onClick={resetMenu}
-                                    className={styles.link}
-                                    href={`${item?.node?.url}`}
-                                    aria-label={`${item?.node?.label}`}
-                                    target={item?.node?.target || "_self"}
-                                >
-                                    {item?.node?.label}
-                                </Link>
-                            </ContentSliceRevealMaskAnimation>
-                        </motion.li>
+                        <Fragment key={index}>
+                            <motion.li
+                                custom={index}
+                                initial={initial}
+                                className="self-end"
+                                whileInView="animate"
+                                variants={navigationMenuStaggerChildren}
+                            >
+                                <ContentSliceRevealMaskAnimation>
+                                    <Link
+                                        onClick={resetMenu}
+                                        className={styles.link}
+                                        href={`${item?.node?.url}`}
+                                        aria-label={`${item?.node?.label}`}
+                                        target={item?.node?.target || "_self"}
+                                    >
+                                        {item?.node?.label}
+                                    </Link>
+                                </ContentSliceRevealMaskAnimation>
+                            </motion.li>
+                        </Fragment>
                     )
                 )
             ) : (
