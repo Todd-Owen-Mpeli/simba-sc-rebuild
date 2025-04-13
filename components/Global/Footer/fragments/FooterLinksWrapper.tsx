@@ -8,9 +8,6 @@ import { initial, stagger, arrayLoopStaggerChildren} from "@/animations/animatio
 // Styling
 import styles from "@/components/Global/Footer/styles/Footer.module.scss";
 
-// Components
-import ContentSliceRevealMaskAnimation from "@/components/Animations/ContentSliceRevealMaskAnimation";
-
 const FooterLinksWrapper: FC<IFooter.IFooterLinksWrapper> = ({sublinks}) => {
     return (
         <motion.ul
@@ -30,16 +27,14 @@ const FooterLinksWrapper: FC<IFooter.IFooterLinksWrapper> = ({sublinks}) => {
                                 viewport={{once: true}}
                                 variants={arrayLoopStaggerChildren}
                             >
-                                <ContentSliceRevealMaskAnimation>
-                                    <Link
-                                        className={styles.link}
-                                        href={`${item?.node?.url}`}
-                                        aria-label={`${item?.node?.label}`}
-                                        target={item?.node?.target || "_self"}
-                                    >
-                                        {item?.node?.label}
-                                    </Link>
-                                </ContentSliceRevealMaskAnimation>
+                                <Link
+                                    className={styles.link}
+                                    href={`${item?.node?.url}`}
+                                    aria-label={`${item?.node?.label}`}
+                                    target={item?.node?.target || "_self"}
+                                >
+                                    {item?.node?.label}
+                                </Link>
                             </motion.li>
                         </Fragment>
                     )
