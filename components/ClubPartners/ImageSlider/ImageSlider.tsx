@@ -1,8 +1,8 @@
 "use client";
 
 // Imports
-import {FC, Fragment, useState} from "react";
-import useWindowSize from "@/hooks/useWindowSize";
+import {FC, Fragment} from "react";
+import useOnDesktopView from "@/hooks/useOnDesktopView";
 import {IImageSlider} from "@/components/ClubPartners/ImageSlider/types/index";
 
 // Swiper.js Slider
@@ -16,18 +16,7 @@ import styles from "@/components/ClubPartners/ImageSlider/styles/ImageSlider.mod
 
 const ImageSlider: FC<IImageSlider.IProps> = ({ imageSlider }) => {
 	// State to track window width and check if on desktop
-	const windowSize = useWindowSize();
-
-	// State to track window width and check if on desktop
-	const [onDesktop, setOnDesktop] = useState(false);
-
-	const handleResize = () => {
-		if ((windowSize?.width ?? 0) > 1024) {
-			setOnDesktop(true);
-		} else {
-			setOnDesktop(false);
-		}
-	};
+	const onDesktop = useOnDesktopView();
 
 	return (
 		<div className={styles.imageSlider}>
